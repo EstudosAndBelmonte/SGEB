@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Desenvolvido pela comunidade X">
+    <meta name="author" content="André Belmonte">
+    <title>SEB</title>
+    <link href="./assets/img/logo/SEB_topo.png" rel="icon" type="image/png">
+    <!-- <link href="<?= base_url('/assets/css/all.min.css') ?>" rel="stylesheet" type="text/css"> -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link href="./assets/css/sb-admin-2.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <script>
+        var base_url = '<?php echo base_url(); ?>';
+    </script>
+    <style>
+        body {
+            background-image: url('./assets/img/bg.jpg');
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+
+
+    <div class="img js-fullheight container">
+        <section class="ftco-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center mb-5">
+                        <h1 class="heading-section h4 text-gray-900 mb-4"> <img src="./assets/img/logo/SEB_logo.png"
+                                alt="" width="205"></h1>
+
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="login-wrap p-0">
+                            <h3 class="mb-4 text-center">Login</h3>
+                            <div class="row">
+                                <div class="col-12 P-2">
+                                    <div class="alert alert-danger d-none" id="alert" role="alert">
+                                        <h4 class="alert-heading">Atenção!</h4>
+                                        <hr>
+                                        <div id="msg" class="mb-0 pb-0 text-dark"></div>
+                                        <hr>
+                                        <p class="alert-heading mb-0 text-dark">Corrija os campos acima.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <form action="#" class="signin-form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Username" required>
+                                </div>
+                                <div class="form-group">
+                                    <input id="password-field" type="password" class="form-control"
+                                        placeholder="Password" required>
+                                    <span toggle="#password-field"
+                                        class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="form-control btn btn-primary submit px-3">Sign
+                                        In</button>
+                                </div>
+                                <div class="form-group d-md-flex">
+                                    <div class="w-50">
+                                        <label class="checkbox-wrap checkbox-primary">Remember Me
+                                            <input type="checkbox" checked>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="w-50 text-md-right">
+                                        <a href="#" style="color: #fff">Forgot Password</a>
+                                    </div>
+                                </div>
+                            </form>
+                            <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
+                            <div class="social d-flex text-center">
+                                <a href="#" class="px-2 py-2 mr-md-1 rounded"><span
+                                        class="ion-logo-facebook mr-2"></span> Facebook</a>
+                                <a href="#" class="px-2 py-2 ml-md-1 rounded"><span
+                                        class="ion-logo-twitter mr-2"></span> Twitter</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <!-- <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-4 col-lg-4 col-md-9">
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="px-3 py-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4"> <img src="<?= base_url('assets/img/logo/SEB_logo.png') ?>" alt="" width="205"></h1>
+                                    </div>
+                                    <hr>
+
+                                    <?= isset($msg) && $msg !== '' ? $msg : ''; ?>
+
+                                    <div class="row">
+                                        <div class="col-12 P-2">
+                                            <div class="alert alert-danger d-none" id="alert" role="alert">
+                                                <h4 class="alert-heading">Atenção!</h4>
+                                                <hr>
+                                                <div id="msg" class="mb-0 pb-0 text-dark"></div>
+                                                <hr>
+                                                <p class="alert-heading mb-0 text-dark">Corrija os campos acima.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="email" class="form-control  p-4" name="email" id="email" placeholder="Informe seu email...">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control p-4" name="password" id="password" placeholder="Informe sua senha...">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox small">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck">
+                                            <label class="custom-control-label" for="customCheck">Relembrar senha</label>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-success btn-block p-4" onclick="login()">Entrar</button>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a class="small" href="forgot-password.html">Esqueceu sua senha?</a>
+                                    </div>
+                                    <div class="text-center">
+                                        <a class="small" href="<?= base_url('login/register') ?>">Encontre um patrocinador!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <script>
+    //     function login() {
+    //         var dadosajax = {
+    //             email: $('#email').val(),
+    //             password: $('#password').val()
+    //         };
+    //         $.ajax({
+    //             url: base_url + "/login/login",
+    //             data: dadosajax,
+    //             type: 'POST', //MÉTODO DE ENVIO TIPO POST//
+    //             dataType: "json",
+    //             cache: false,
+    //             error: function () {
+    //                 swal.fire("Atenção!", "Ocorreu um erro ao buscar dados!", "error");
+    //             },
+    //             beforeSend: function () {
+
+    //                 swal.fire({
+    //                     title: "Aguarde!",
+    //                     text: "Buscando dados...",
+    //                     imageUrl: base_url + "/assets/img/gifs/loader.gif",
+    //                     showConfirmButton: false
+    //                 });
+    //             },
+    //             success: function (result) {
+    //                 if (result.cod == 2) {
+    //                     swal.fire({
+    //                         timer: 1000,
+    //                         title: "Aguarde!",
+    //                         text: "Buscando dados...",
+    //                         imageUrl: base_url + "/assets/img/gifs/loader.gif",
+    //                         showConfirmButton: false
+    //                     });
+    //                     $('#msg').html(result.mensagens);
+    //                     $('#alert').removeClass('d-none');
+    //                 } else {
+    //                     swal.fire("Atenção!", "Logado!", "info");
+    //                 }
+    //             }
+    //         });
+    //     }
+    // </script>
+
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/popper.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/vendor/jquery/jquery.min.js"></script>
+    <script src="./assets/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets//assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="./assets//assets/js/sb-admin-2.min.js"></script>
+    <script src="./assets//assets/vendor/chart.js/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+</body>
+
+</html>
